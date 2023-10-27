@@ -1,31 +1,113 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div class="layout-container">
+    <div id="pageHeaderContainer"></div>
+    <div class="header-section-course" style="padding: 20px; margin: 10px">
+        <div class="container courseHeaderContainer">
+            <h3 class="" id="coursesHeader">
+                <div class="pull-left">
+                    <span id="coursesHeaderSpan">LUYỆN KIẾN THỨC NGÔN NGỮ LẬP TRÌNH </span>
+                </div>
+            </h3>
+        </div>
+    </div>
+    <style>
+        .book {
+            position: relative;
+            border-radius: 10px;
+            width: 300px;
+            height: 400px;
+            background-color: whitesmoke;
+            -webkit-box-shadow: 1px 1px 12px #000;
+            box-shadow: 1px 1px 12px #000;
+            -webkit-transform: preserve-3d;
+            -ms-transform: preserve-3d;
+            transform: preserve-3d;
+            -webkit-perspective: 2000px;
+            perspective: 2000px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            color: #000;
+        }
+
+        .cover {
+            top: 0;
+            position: absolute;
+            @*background-color: red;*@
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+            -webkit-transform-origin: 0;
+            -ms-transform-origin: 0;
+            transform-origin: 0;
+            -webkit-box-shadow: 1px 1px 12px #000;
+            box-shadow: 1px 1px 12px #000;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .book:hover .cover {
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+            -webkit-transform: rotatey(-80deg);
+            -ms-transform: rotatey(-80deg);
+            transform: rotatey(-80deg);
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .flex-container {
+            display: flex;
+        }
+    </style>
+
+    <div class="flex-container" style="display: flex; flex-wrap: wrap; justify-content: space-between; max-height: 450px; display: flex; max-width: 1500px; overflow-y: auto ;">
+            <div style="width: auto; text-align: center; display: flex; height: 450px; margin: 20px;">
+                <div class="book">
+                    <div style="text-align: center">
+                        <p>asdasda</p>
+                        <hr />
+                        <span></span><br />
+                        <span>Tổng 100 câu</span><br />
+                        <span>Bạn muốn làm 5 câu</span><br />
+                        <button type="button" style="width: 100px; margin: 10px; height: auto; font-size: 17px" class="btn btn-success">Bắt đầu</button>
+                    </div>
+                    <div class="cover" style="background-color: grey">
+                        <div style="display: flex; flex-direction: column; height: 100%;">
+                            <div style="height: 50%; width: 100%; display: flex; justify-content: center; align-items: center;" class="nav-link py-1 text-700 font-weight-medium dropdown-sub-item">
+                                <svg class="svg-inline--fa fa-bool fa-w-14 mr-1 text-warning" data-fa-transform="shrink-3" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="" style="transform-origin: 0.4375em 0.5em;"><g transform="translate(224 256)"><g transform="translate(0, 0)  scale(0.8125, 0.8125)  rotate(0 0 0)"><path fill="currentColor" d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z" transform="translate(-224 -256)"></path></g></g></svg>
+
+                            </div>
+                            <div style="height: 50%; width: 100%; display: flex; justify-content: center; align-items: center;">
+                                <p style="color: white">sfdfs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>

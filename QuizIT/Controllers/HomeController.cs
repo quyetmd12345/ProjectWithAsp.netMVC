@@ -8,23 +8,44 @@ namespace QuizIT.Controllers
 {
     public class HomeController : Controller
     {
+
+
         public ActionResult Index ()
         {
             return View();
         }
 
-        public ActionResult About ()
-        {
-            ViewBag.Message = "Your application description page.";
 
-            return View();
+
+        public ActionResult HeadPartial ()
+        {
+            return PartialView();
         }
 
-        public ActionResult Contact ()
+        public ActionResult MetaPartial ()
         {
-            ViewBag.Message = "Your contact page.";
+            return PartialView();
+        }
 
-            return View();
+        public ActionResult MenuPartial ()
+        {
+            return PartialView();
+        }
+
+
+
+        public ActionResult FooterPartial ()
+        {
+            return PartialView();
+        }
+
+        public int GetRandomIndex (List<string> list)
+        {
+            Random random = new Random();
+
+            int randomIndex = random.Next(0, list.Count);
+
+            return randomIndex;
         }
     }
 }

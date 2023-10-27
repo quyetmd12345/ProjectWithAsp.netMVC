@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @Html.Action("MetaPartial", "Home")
+    <title>@ViewBag.Title</title>
+    @Html.Action("HeadPartial", "Home")
+</head>
+<body style="font-size: 17px">
+    <div class="wrap">
+        <div class="wrapper" id="navigation">
+            @Html.Action("MenuPartial", "Home")
+        </div>
+        <div id="content" style="max-height: 550px; height: 550px">
+            @RenderBody()
+        </div>
+        <footer style="background-color: #000; bottom: 0; position: absolute; width: 100%; height: auto">
+            @Html.Action("FooterPartial", "Home")
+        </footer>
+    </div>
+</body>
+</html>

@@ -4,18 +4,30 @@
     @Html.Action("MetaPartial", "Home")
     <title>@ViewBag.Title</title>
     @Html.Action("HeadPartial", "Home")
+    <style>
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+        }
+    </style>
 </head>
 <body style="font-size: 17px">
     <div class="wrap">
         <div class="wrapper" id="navigation">
             @Html.Action("MenuPartial", "Home")
         </div>
-        <div id="content" style="max-height: 550px; height: 550px">
+        <div id="content" style="max-height: 550px; height: 550px; margin-bottom: 230px">
             @RenderBody()
         </div>
-        <footer style="background-color: #000; bottom: 0; position: absolute; width: 100%; height: auto">
-            @Html.Action("FooterPartial", "Home")
-        </footer>
+        <div class="footer">
+            <div class="container">
+                @Html.Action("FooterPartial", "Home")
+            </div>
+        </div>
     </div>
 </body>
 </html>

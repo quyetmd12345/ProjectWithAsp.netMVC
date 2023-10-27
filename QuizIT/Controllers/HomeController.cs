@@ -15,6 +15,11 @@ namespace QuizIT.Controllers
             return View();
         }
 
+        public ActionResult DangKyTaiKhoan ()
+        {
+            return View();
+        }
+
 
 
         public ActionResult HeadPartial ()
